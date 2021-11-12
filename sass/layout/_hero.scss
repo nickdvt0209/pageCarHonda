@@ -1,0 +1,35 @@
+.hero {
+  padding-bottom: 200px;
+  background: $color-secondary;
+  .carousel-indicators {
+    transform: translateY(80px);
+    li {
+      margin-top: 100px;
+      background-color: #fff;
+      width: 15px;
+      height: 15px;
+      margin-left: 15px;
+      border-radius: 50%;
+    }
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 100px;
+    background: $color-primary;
+    border-radius: 15px 0 0 15px;
+  }
+  .carousel-control-prev {
+    border-radius: 0 15px 15px 0;
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 25px;
+    height: 25px;
+  }
+}

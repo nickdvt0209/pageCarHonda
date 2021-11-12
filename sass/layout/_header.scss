@@ -1,0 +1,45 @@
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #bd5d03;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 50px;
+  &__item {
+    padding: 25px 20px;
+  }
+  &__left {
+    @include flex(center, space-between, none);
+    img {
+      width: 45px;
+      height: 45px;
+    }
+    &-logo {
+      display: flex;
+      align-items: center;
+      margin-left: 0;
+      padding: 0 20px 0 0;
+    }
+
+    &-menu {
+      border-right: 1px solid #fff;
+      display: flex;
+      align-items: center;
+      i {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  &__right {
+    &-item {
+      &:nth-child(4),
+      &:last-child {
+        border-left: 1px solid #fff;
+      }
+    }
+  }
+}

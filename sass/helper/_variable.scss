@@ -1,0 +1,12 @@
+$font-primary: "Open Sans", sans-serif;
+$font-secondary: "Poppins", sans-serif;
+
+$color-primary: #e77306;
+$color-secondary: #974c06;
+
+@mixin flex($align, $jus, $wrap) {
+  display: flex;
+  align-items: $align;
+  justify-content: $jus;
+  flex-wrap: $wrap;
+}
