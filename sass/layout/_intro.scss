@@ -1,0 +1,56 @@
+.intro {
+  height: 200px;
+  a {
+    text-decoration: none;
+    &:hover {
+      color: inherit;
+    }
+  }
+  &__list {
+    @include flex(center, center, none);
+    margin: 0 auto;
+    transform: translateY(-50%);
+  }
+  &__item {
+    width: 50%;
+    border-radius: 20px;
+    &-left {
+      background: url(./../image/our-vehicle-intro-1.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-right: 20px;
+    }
+    &-right {
+      background: url(./../image/our-vehicle-intro-2.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-left: 20px;
+    }
+  }
+  &__inner {
+    padding: 30px;
+    height: 350px;
+    &-left {
+      @include flex(center, center, none);
+      flex-direction: column;
+    }
+    &-right {
+      @include flex(none, center, none);
+      flex-direction: column;
+    }
+    &-title {
+      margin: 20px 0;
+    }
+    &-desc {
+      margin-bottom: 20px;
+    }
+
+    &-heading {
+      background: $color-secondary;
+      width: max-content;
+      padding: 10px 20px;
+    }
+  }
+}

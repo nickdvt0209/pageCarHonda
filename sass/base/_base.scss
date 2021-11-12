@@ -31,7 +31,7 @@ input {
 // }
 
 .container {
-  max-width: 1170px;
+  max-width: 1220px;
   margin: 0 auto;
   padding: 0 50px;
 }
@@ -42,6 +42,24 @@ input {
   font-size: 50px;
   font-weight: 700;
   color: $color-primary;
+}
+.btn {
+  width: max-content;
+  padding: 10px 30px;
+  background: $color-primary;
+  border-radius: 50px;
+  font-weight: bold;
+  color: inherit;
+  border: 0;
+}
+.btn-border {
+  width: max-content;
+  padding: 10px 30px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  font-weight: bold;
+  color: inherit;
 }
 
 @media screen and(max-width:479px) {
