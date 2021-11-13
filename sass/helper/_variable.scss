@@ -1,8 +1,9 @@
 $font-primary: "Open Sans", sans-serif;
 $font-secondary: "Poppins", sans-serif;
 
-$color-primary: #e77306;
-$color-secondary: #974c06;
+$color-primary: #974c06;
+$color-secondary: #e77306;
+$color-orange-light: #8b5d33;
 
 @mixin flex($align, $jus, $wrap) {
   display: flex;

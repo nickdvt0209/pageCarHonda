@@ -1,6 +1,6 @@
 .hero {
   padding-bottom: 250px;
-  background: $color-primary;
+  background: $color-secondary;
   .carousel-indicators {
     transform: translateY(70px);
     li {
@@ -21,7 +21,7 @@
     transform: translateY(-50%);
     width: 50px;
     height: 100px;
-    background: $color-primary;
+    background: $color-secondary;
     border-radius: 15px 0 0 15px;
   }
   .carousel-control-prev {

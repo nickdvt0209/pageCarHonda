@@ -9,7 +9,7 @@
     font-size: 60px;
     font-weight: 700;
     margin-bottom: 50px;
-    color: $color-secondary;
+    color: $color-primary;
   }
 
   .nav-pills {
@@ -45,12 +45,12 @@
       .nav-link {
         padding: 15px 30px;
         font-weight: bold;
-        color: $color-secondary;
+        color: $color-primary;
         border-radius: 50px;
       }
       .active {
         transition: all 0.2s linear;
-        background: $color-primary;
+        background: $color-secondary;
         color: #fff;
         &::after {
           content: "";
@@ -83,7 +83,7 @@
     }
     &-logo {
       width: 50%;
-      margin: 20px 0;
+      margin: 15px 0;
     }
     &-desc {
       display: inline-block;
@@ -115,6 +115,10 @@
     }
     &-bottom {
       border-top: 2px solid #898989;
+      transition: all 0.2s linear;
+      &:hover {
+        color: $color-secondary;
+      }
     }
     &-link {
       font-weight: 700;
