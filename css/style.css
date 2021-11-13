@@ -496,3 +496,82 @@ input {
 .product__content-link i {
   margin-left: 10px;
 }
+
+.services {
+  color: #974c06;
+  margin-bottom: 50px;
+}
+
+.services a {
+  text-decoration: none;
+}
+
+.services__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 0 30px;
+}
+
+.services__item {
+  padding: 50px 20px;
+  -webkit-box-shadow: #c5c5c5 0px 5px 10px 0px;
+          box-shadow: #c5c5c5 0px 5px 10px 0px;
+  border-radius: 10px;
+  text-align: center;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.services__item-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: none;
+      flex-wrap: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.services__item i {
+  font-size: 80px;
+}
+
+.services__item-heading {
+  font-weight: 700;
+  font-size: 30px;
+  margin: 35px 0 15px 0;
+}
+
+.services__item-desc {
+  margin-bottom: 35px;
+}
+
+.services__item-button {
+  border: 2px solid #974c06;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.services__item-button:hover {
+  border: 0;
+  background: #e77306;
+  color: #fff;
+}
+
+.services__item:hover {
+  -webkit-transform: translateY(-20px);
+      -ms-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
