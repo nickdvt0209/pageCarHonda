@@ -1,0 +1,36 @@
+.banner {
+  padding: 50px 0;
+  color: #fff;
+  //   text-align: center;
+  &__list {
+    @include flex(center, space-around, none);
+  }
+  &__item {
+    padding: 170px 20px 30px 20px;
+    border-radius: 10px;
+  }
+  &__content {
+    @include flex(center, center, none);
+    flex-direction: column;
+    &-heading {
+      margin: 0px;
+    }
+    &-desc {
+      margin: 20px;
+    }
+  }
+  &__left {
+    background: url(./../image/intro-3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 25px;
+  }
+  &__right {
+    background-image: url(./../image/intro-4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 25px;
+  }
+}
