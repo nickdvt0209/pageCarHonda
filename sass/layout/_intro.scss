@@ -2,9 +2,6 @@
   height: 200px;
   a {
     text-decoration: none;
-    &:hover {
-      color: inherit;
-    }
   }
   &__list {
     @include flex(center, center, none);
@@ -45,6 +42,24 @@
     }
     &-desc {
       margin-bottom: 20px;
+    }
+    &-btn {
+      color: $color-blue;
+      border: 2px solid currentColor;
+      transition: all 0.2s linear;
+      &:hover {
+        color: #fff;
+        background: $color-secondary;
+        border: 2px solid $color-secondary;
+      }
+    }
+    &-link {
+      transition: all 0.2s linear;
+      &:hover {
+        color: #fff;
+        background: $color-secondary;
+        border: 2px solid $color-secondary;
+      }
     }
 
     &-heading {
