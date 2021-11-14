@@ -1,7 +1,7 @@
 .blog {
   color: $color-primary;
   text-align: center;
-  margin-top: 100px;
+  margin: 100px 0;
   a {
     text-decoration: none;
   }
@@ -19,6 +19,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
+    margin-bottom: 100px;
   }
 
   &__content {
@@ -153,5 +154,66 @@
 
   &__item:hover .blog__content {
     transform: rotateY(180deg);
+  }
+
+  // search blog
+
+  &__search {
+    &-link {
+      display: inline-block;
+      margin-bottom: 50px;
+      padding: 5px 25px;
+      background: $color-blue;
+      border: 2px solid $color-blue;
+      color: #fff;
+      font-weight: 700;
+      font-size: 20px;
+      border-radius: 50px;
+      transition: all 0.2s linear;
+      &:hover {
+        border: 2px solid $color-secondary;
+        color: $color-secondary;
+        background: transparent;
+      }
+    }
+    &-group {
+      margin: 0 auto;
+      box-shadow: inset rgba(#c5c5c5, 0.5) 2px 2px 5px 0;
+      width: 90%;
+      padding: 10px 50px;
+      border-radius: 50px;
+      @include flex(center, space-between, none);
+      i {
+        margin-right: 15px;
+        font-size: 25px;
+        font-weight: 700;
+        color: $color-secondary;
+      }
+      input {
+        flex-grow: 1;
+        color: $color-blue;
+        font-size: 18px;
+        &::-webkit-input-placeholder {
+          color: $color-blue;
+        }
+        &::-moz-input-placeholder {
+          color: $color-blue;
+        }
+      }
+      a {
+        margin-left: 15px;
+        background: transparent;
+        font-weight: 700;
+        color: $color-secondary;
+        border: 3px solid $color-secondary;
+        border-radius: 50px;
+        padding: 5px 15px;
+        &:hover {
+          background: $color-secondary;
+          color: #fff;
+          border: 3px solid $color-secondary;
+        }
+      }
+    }
   }
 }
