@@ -46,8 +46,10 @@
   &__right {
     @include flex(center, space-around, none);
     margin: 0;
-    &-item {
+    li {
       list-style: none;
+    }
+    &-item {
       margin: 0 10px;
       position: relative;
 
@@ -72,13 +74,21 @@
           width: 100%;
         }
       }
-
-      &:last-child {
-        a::after {
-          content: none;
-        }
-        font-size: 25px;
-      }
     }
+  }
+  &__search,
+  &__bars {
+    margin-left: 10px;
+    cursor: pointer;
+    a::after {
+      content: none;
+    }
+    font-size: 25px;
+  }
+  &__search {
+  }
+  &__bars {
+    display: none;
+    margin-left: 30px;
   }
 }
