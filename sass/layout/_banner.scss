@@ -1,6 +1,7 @@
 .banner {
-  padding-top: 50px;
+  padding: 50px 0;
   color: #fff;
+  background: rgba($color-secondary, 0.5);
   a {
     text-decoration: none;
   }
@@ -16,6 +17,7 @@
     flex-direction: column;
     &-heading {
       margin: 0px;
+      text-align: center;
     }
     &-desc {
       margin: 20px;
