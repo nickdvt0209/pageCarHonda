@@ -175,6 +175,57 @@
       padding: 10px 20px;
     }
   }
+
+  .footer {
+    &__list {
+      ul {
+        margin-bottom: 0;
+      }
+      grid-template-columns: 1fr;
+    }
+    &__link {
+      display: none;
+      &:first-child {
+        display: block;
+        margin: 0;
+        padding: 15px 0;
+        border-bottom: 2px solid #f7f7f7;
+      }
+    }
+    &__contact {
+      flex-direction: column;
+      align-items: flex-start;
+      &-mail {
+        align-items: flex-start;
+        margin-top: 30px;
+      }
+    }
+    &__bottom {
+      &-text {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      &-copyright,
+      &-link {
+        width: 100%;
+        padding-bottom: 0;
+      }
+      &-link {
+        padding-top: 0;
+        justify-content: flex-start;
+      }
+      &-logo {
+        @include flex(center, center, none);
+        img {
+          display: none;
+        }
+        &-mobile {
+          display: block !important;
+          width: 10%;
+        }
+      }
+    }
+  }
 }
 @media screen and (max-width: 479px) {
   .hero {

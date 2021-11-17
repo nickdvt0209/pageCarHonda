@@ -25,20 +25,17 @@
   }
   &__contact {
     padding: 30px 0 50px 0;
-    &-text {
-      @include flex(center, space-between, none);
+    @include flex(center, space-between, none);
+
+    &-icon {
+      @include flex(none, center, none);
+      flex-direction: column;
     }
     &-heading {
       font-size: 25px;
       font-weight: 700;
       color: $color-primary;
       margin-bottom: 25px;
-    }
-    &-right {
-      color: $color-primary;
-    }
-    &-iconbutton {
-      @include flex(center, space-between, none);
     }
     &-listicon {
       i {
@@ -47,6 +44,17 @@
         margin-right: 10px;
       }
     }
+    &-right {
+      color: $color-primary;
+    }
+    &-mail {
+      @include flex(flex-end, center, none);
+      flex-direction: column;
+      &-text {
+        color: $color-primary;
+      }
+    }
+
     &-button {
       color: $color-secondary;
       border-color: currentColor;
@@ -79,7 +87,8 @@
       }
     }
     &-link {
-      display: flex;
+      width: 50%;
+      @include flex(center, flex-end, wrap);
       padding: 25px;
     }
     &-item {
@@ -96,7 +105,9 @@
       }
     }
     &-logo {
-      @include flex(center, space-around, none);
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 0 10px;
     }
   }
 }

@@ -205,6 +205,7 @@ input {
   -ms-flex-wrap: none;
       flex-wrap: none;
   margin: 0;
+  position: relative;
 }
 
 .header__right li {
@@ -247,6 +248,23 @@ input {
 
 .header__search a::after, .header__bars a::after {
   content: none;
+}
+
+.header__input {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 300px;
+  border: 2px solid #e77306;
+  border-radius: 50px;
+  padding: 10px 30px;
+  -webkit-box-shadow: rgba(231, 115, 6, 0.5) 0px 0px 10px 5px;
+          box-shadow: rgba(231, 115, 6, 0.5) 0px 0px 10px 5px;
+  display: none;
+}
+
+.header__search-active .header__input {
+  display: block;
 }
 
 .header__bars {
@@ -697,6 +715,7 @@ input {
 
 .banner {
   padding: 50px 0;
+  margin-top: 100px;
   color: #fff;
   background: rgba(231, 115, 6, 0.5);
 }
@@ -1133,9 +1152,6 @@ input {
 
 .footer__contact {
   padding: 30px 0 50px 0;
-}
-
-.footer__contact-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1147,6 +1163,24 @@ input {
           justify-content: space-between;
   -ms-flex-wrap: none;
       flex-wrap: none;
+}
+
+.footer__contact-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: none;
+      flex-wrap: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .footer__contact-heading {
@@ -1156,28 +1190,36 @@ input {
   margin-bottom: 25px;
 }
 
-.footer__contact-right {
-  color: #974c06;
-}
-
-.footer__contact-iconbutton {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: none;
-      flex-wrap: none;
-}
-
 .footer__contact-listicon i {
   font-size: 25px;
   color: #e77306;
   margin-right: 10px;
+}
+
+.footer__contact-right {
+  color: #974c06;
+}
+
+.footer__contact-mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: none;
+      flex-wrap: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__contact-mail-text {
+  color: #974c06;
 }
 
 .footer__contact-button {
@@ -1230,9 +1272,18 @@ input {
 }
 
 .footer__bottom-link {
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 25px;
 }
 
@@ -1251,16 +1302,165 @@ input {
 }
 
 .footer__bottom-logo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
+  gap: 0 10px;
+}
+
+.menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  z-index: 999;
+  background: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 15px 10px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 15px 10px;
+  -webkit-transform: translateX(120%);
+      -ms-transform: translateX(120%);
+          transform: translateX(120%);
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  will-change: transform;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.menu.is-active {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.menu-close {
+  color: #e77306;
+  cursor: pointer;
+  font-size: 30px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: none;
       flex-wrap: none;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.menu-close:hover {
+  background-color: #e77306;
+  color: #fff;
+}
+
+.menu-list {
+  list-style: none;
+  height: 100%;
+  padding: 70px 20px 20px;
+}
+
+.menu-item {
+  margin-bottom: 10px;
+}
+
+.menu-item i {
+  margin-left: 20px;
+}
+
+.menu-item input {
+  border: 2px solid #e77306;
+}
+
+.menu-item input::-webkit-input-placeholder {
+  color: #e77306;
+}
+
+.menu-item input::-moz-input-placeholder {
+  color: #e77306;
+}
+
+.menu-link {
+  display: block;
+  padding: 15px;
+  text-transform: capitalize;
+  color: #e77306;
+  border-radius: 6px;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.menu-link:hover {
+  color: #fff;
+  background-color: #e77306;
+  font-weight: bold;
+}
+
+.menu .search-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -ms-flex-wrap: none;
+      flex-wrap: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu .search-group input {
+  border: 2px solid #e77306;
+  border-radius: 50px;
+  padding: 10px 20px;
+  color: #e77306;
+  margin-top: 100px;
+  width: 100%;
+}
+
+.menu-search {
+  border: 2px solid #974c06;
+  color: #974c06;
+  border-radius: 50px;
+  padding: 5px 15px;
+  margin-top: 10px;
+}
+
+.menu-search:hover {
+  border-color: #e77306;
+  color: #fff;
+  background: #e77306;
+}
+
+.menu-phone {
+  padding: 15px;
+  color: #e77306;
+}
+
+.menu-phone a {
+  color: inherit;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 1023px) {
@@ -1427,6 +1627,76 @@ input {
   }
   .blog__search-group {
     padding: 10px 20px;
+  }
+  .footer__list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .footer__list ul {
+    margin-bottom: 0;
+  }
+  .footer__link {
+    display: none;
+  }
+  .footer__link:first-child {
+    display: block;
+    margin: 0;
+    padding: 15px 0;
+    border-bottom: 2px solid #f7f7f7;
+  }
+  .footer__contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .footer__contact-mail {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 30px;
+  }
+  .footer__bottom-text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .footer__bottom-copyright, .footer__bottom-link {
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .footer__bottom-link {
+    padding-top: 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .footer__bottom-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: none;
+        flex-wrap: none;
+  }
+  .footer__bottom-logo img {
+    display: none;
+  }
+  .footer__bottom-logo-mobile {
+    display: block !important;
+    width: 10%;
   }
 }
 

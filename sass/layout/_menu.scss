@@ -1,0 +1,106 @@
+.menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  z-index: 999;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 15px 10px;
+  transform: translateX(120%);
+  transition: all 0.2s linear;
+  will-change: transform;
+  a {
+    text-decoration: none;
+  }
+
+  &.is-active {
+    transform: translateX(0);
+  }
+
+  &-close {
+    color: $color-secondary;
+    cursor: pointer;
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    @include flex(center, center, none);
+    transition: all 0.2s linear;
+    &:hover {
+      background-color: $color-secondary;
+      color: #fff;
+    }
+  }
+
+  &-list {
+    list-style: none;
+    height: 100%;
+    padding: 70px 20px 20px;
+  }
+
+  &-item {
+    margin-bottom: 10px;
+    i {
+      margin-left: 20px;
+    }
+    input {
+      border: 2px solid $color-secondary;
+      &::-webkit-input-placeholder {
+        color: $color-secondary;
+      }
+      &::-moz-input-placeholder {
+        color: $color-secondary;
+      }
+    }
+  }
+  &-link {
+    display: block;
+    padding: 15px;
+    text-transform: capitalize;
+    color: $color-secondary;
+    border-radius: 6px;
+    transition: all 0.2s linear;
+    &:hover {
+      color: #fff;
+      background-color: $color-secondary;
+      font-weight: bold;
+    }
+  }
+  .search-group {
+    @include flex(flex-end, none, none);
+    flex-direction: column;
+    input {
+      border: 2px solid #e77306;
+      border-radius: 50px;
+      padding: 10px 20px;
+      color: #e77306;
+      margin-top: 100px;
+      width: 100%;
+    }
+  }
+  &-search {
+    border: 2px solid $color-primary;
+    color: $color-primary;
+    border-radius: 50px;
+    padding: 5px 15px;
+    margin-top: 10px;
+    &:hover {
+      border-color: $color-secondary;
+      color: #fff;
+      background: $color-secondary;
+    }
+  }
+
+  &-phone {
+    padding: 15px;
+    color: $color-secondary;
+    a {
+      color: inherit;
+      font-weight: bold;
+    }
+  }
+}
