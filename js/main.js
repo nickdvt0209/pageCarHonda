@@ -21,19 +21,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     var header = document.querySelectorAll('header.header');
-//     var header = header[0];
-//     window.addEventListener("scroll", function () {
-//         var x = pageYOffset;
-//         if (x > 100) {
-//             header.classList.add('header__fixed');
-//             // document.getElementById("rocket").style.display = 'block';
-//         }
-//         else {
-//             header.classList.remove('header__fixed');
-//             // document.getElementById("rocket").style.display = 'none';
-//         }
+document.addEventListener("DOMContentLoaded", function () {
+    var header = document.querySelectorAll('header.header');
+    var header = header[0];
+    window.addEventListener("scroll", function () {
+        var x = pageYOffset;
+        if (x > 100) {
+            header.classList.add('header__fixed');
+            document.getElementById("rocket").style.display = 'block';
+        }
+        else {
+            header.classList.remove('header__fixed');
+            document.getElementById("rocket").style.display = 'none';
+        }
 
-//     })
-// })
+    })
+})

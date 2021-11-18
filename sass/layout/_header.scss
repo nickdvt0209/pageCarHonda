@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  z-index: 2;
+  z-index: 99;
   width: 100%;
   display: flex;
   align-items: center;
@@ -109,4 +109,7 @@
     display: none;
     margin-left: 30px;
   }
+}
+.header__fixed {
+  position: fixed;
 }

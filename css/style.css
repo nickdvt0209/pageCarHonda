@@ -117,7 +117,7 @@ input {
 
 .header {
   position: relative;
-  z-index: 2;
+  z-index: 99;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -270,6 +270,10 @@ input {
 .header__bars {
   display: none;
   margin-left: 30px;
+}
+
+.header__fixed {
+  position: fixed;
 }
 
 .hero {
@@ -1309,12 +1313,50 @@ input {
   gap: 0 10px;
 }
 
+.footer #rocket {
+  color: #2198dc;
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px solid #2198dc;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 50px;
+  right: 60px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  text-align: center;
+  line-height: 1.9;
+}
+
+.footer #rocket a {
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.footer #rocket a:hover {
+  color: #fff;
+}
+
+.footer #rocket:hover {
+  background: #2198dc;
+  border-color: #2198dc;
+  color: #fff;
+}
+
 .menu {
   position: fixed;
   right: 0;
   top: 0;
   bottom: 0;
   width: 300px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   z-index: 999;
   background: #fff;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 15px 10px;
@@ -1373,6 +1415,10 @@ input {
   list-style: none;
   height: 100%;
   padding: 70px 20px 20px;
+}
+
+.menu-mobile {
+  display: none;
 }
 
 .menu-item {
@@ -1548,6 +1594,12 @@ input {
 }
 
 @media screen and (max-width: 767px) {
+  .menu-mobile {
+    display: block;
+  }
+  .menu-list .search-group input {
+    margin-top: 50px;
+  }
   .header {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -1801,5 +1853,8 @@ input {
   }
   .blog__search-mobile {
     display: block;
+  }
+  .footer__bottom-link {
+    margin-left: -10px;
   }
 }

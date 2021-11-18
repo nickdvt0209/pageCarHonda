@@ -87,7 +87,19 @@
     }
   }
 }
+
 @media screen and (max-width: 767px) {
+  .menu {
+    &-mobile {
+      display: block;
+    }
+    &-list {
+      .search-group input {
+        margin-top: 50px;
+      }
+    }
+  }
+
   .header {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -227,6 +239,7 @@
     }
   }
 }
+
 @media screen and (max-width: 479px) {
   .hero {
     .carousel-control-next,
@@ -332,5 +345,9 @@
         display: block;
       }
     }
+  }
+
+  .footer__bottom-link {
+    margin-left: -10px;
   }
 } ;
